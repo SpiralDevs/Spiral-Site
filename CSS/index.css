@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+postmedia {}
+
+body: {
+  position: fixed;
+  z-index: 99;
+}
+
+postmedia {
+  position: sticky;
+  top: 0px;
+  padding: 10px 0px;
+}
+
+.divv {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+heartpos {
+  position: absolute;
+  margin-top: 18%;
+  margin-left: -95%;
+}
+
+postout {
+
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 25px;
+  background: grey;
+  padding: 20px;
+  width: 85%;
+}
+
+postoutj {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 25px;
+  background: grey;
+  padding: 20px;
+  width: 85%;
+  height: 120px;
+}
+
+postoutf {
+  margin-left: 3%;
+  border-radius: 25px;
+  background: grey;
+  padding: 20px;
+  width: 94%;
+  height: 94%;
+}
+
+postoutsmol {
+  border-radius: 25px;
+  background: grey;
+  width: 97%;
+  height: 94%;
+}
+
+postoutn {
+  border-radius: 25px;
+  background: grey;
+  padding: 20px;
+  width: 100%;
+  height: 15%;
+}
+
+p {
+  font-weight: 500;
+  font-family: 'Roboto Mono', monospace;
+  color: #edf0f1;
+}
+
+#typing-text {
+  color: #FFFFFF;
+  font-weight: 500;
+  text-align: left;
+  font-family: 'Roboto Mono', monospace;
+  overflow: auto;
+  background-color: rgb(34, 34, 34);
+  font-size: 15px;
+  padding: 5px;
+  height: 35px;
+  width: 100%;
+  outline: none;
+  resize: none;
+  box-sizing: border-box;
+}
+
+.w3-sidebar {
+  width: 120px;
+  background: #222;
+}
+
+* {
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Mono', monospace;
+  /* box-sizing: border-box; */
+}
+
+body {
+  background-color: rgb(55, 55, 55);
+}
+
+/*nav begin*/
+
+li,
+a,
+button {
+  border: 0 !important;
+  font-weight: 500;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+h4 {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+  background-color: rgb(34, 34, 34);
+}
+
+h5 {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+h1 {
+  color: #edf0f1;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 10%;
+  background-color: rgb(34, 34, 34);
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  background-color: rgb(34, 34, 34);
+}
+
+a,
+button {
+  padding: 0px;
+}
+
+button:hover {
+  background-color: rgba(34, 34, 34, 0.8);
+}
+
+a:hover {
+  color: #ADD8E6;
+}
+
+
+.comment {
+  margin-left: 200%;
+}
+
+.commentbtn {
+  margin-left: 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+heartpos: {
+  button {
+    border: none;
+  }
+}
+
+.deleteicon {
+  position: relative;
+  right: -48%;
+}
+
+
+.pingdark {
+  color: #edf0f1;
+}
+
+.pingdark:hover {
+  color: #c9dde6;
+  text-shadow: #edf0f1 0px 0px 10px;
+}
+
+.pinglight {}
+
+
+.pinglight:hover {
+  color: #575757;
+  text-shadow: #404040 0px 0px 1px;
+}
