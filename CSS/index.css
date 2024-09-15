@@ -25,7 +25,7 @@ postmedia {}
 
 body: {
   position: fixed;
-  z-index: 99;
+  z-index: 1;
 }
 
 postmedia {
@@ -204,33 +204,4 @@ a:hover {
 
 ul {
   list-style-type: none;
-}
-
-heartpos: {
-  button {
-    border: none;
-  }
-}
-
-.deleteicon {
-  position: relative;
-  right: -48%;
-}
-
-
-.pingdark {
-  color: #edf0f1;
-}
-
-.pingdark:hover {
-  color: #c9dde6;
-  text-shadow: #edf0f1 0px 0px 10px;
-}
-
-.pinglight {}
-
-
-.pinglight:hover {
-  color: #575757;
-  text-shadow: #404040 0px 0px 1px;
 }
