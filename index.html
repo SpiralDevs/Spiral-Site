@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="icon" type="image/x-icon" href="spiral.ico?">
+    <link rel="icon" type="image/x-icon" href="spiral.ico">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,33 +11,49 @@
     <meta content="SpiralDevs" property="og:title" />
     <meta content="Home page for spiraldevs.xyz" property="og:description" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/sidebar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/header.css">
     <link rel="stylesheet" href="CSS/index.css">
     <link rel="stylesheet" href="CSS/portfolio.css">
 </head>
 
 <body>
+    <div class="top-bar">
+        <div class="home-icon">
+            <a href="https://spiraldevs.xyz/">
+                <img src="Images/svg/home.svg" alt="Home">
+            </a>
+        </div>
+        <header>
+            <nav>
+                <div class="nav-container">
+                    <ul class="nav_links">
+                        <li><a href="https://portfolio.spiraldevs.xyz/" class="nav-item">Portfolio<span class="active-dot" id="portfolio-dot"></span></a></li>
+                        <li><a href="https://devlogs.spiraldevs.xyz/" class="nav-item">Devlogs<span class="active-dot" id="devlogs-dot"></span></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="github-link">
+            <a href="https://github.com/SpiralDevs">
+                <img src="Images/svg/github.svg" width="32" height="32" alt="GitHub">
+            </a>
+        </div>
+    </div>
 
-    <header>
-        <nav>
-            <ul class="nav_links">
-                <li><a href="https://spiraldevs.xyz/"><img src="Images/svg/home.svg" height="24px" width="24px" style="position: relative; top:4px;"> Home</a></li>
-                <li><a href="https://portfolio.spiraldevs.xyz/"><img src="Images/svg/portfolio.svg" height="24px" width="24px" style="position: relative; top:4px;"> Portfolio</a></li>
-                <li><a href="https://devlogs.spiraldevs.xyz/"><img src="Images/svg/devlog.svg" height="24px" width="24px" style="position: relative; top:4px;"> Devlogs</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="portfolio-text" class="container">
-        <h1>Home</h1>
-        <br>
-        <p>Welcome to the home page of my site!</p>
-        <p>Check out the <a href="https://devlogs.spiraldevs.xyz/" class="link">devlog</a> and <a href="https://portfolio.spiraldevs.xyz/" class="link">portfolio</a> pages!</p>
+    <section class="home-body">
+        <h1>Welcome to SpiralDevs</h1>
+        <p>Check out the <a href="https://portfolio.spiraldevs.xyz/" class="link">portfolio</a> and <a href="https://devlogs.spiraldevs.xyz/" class="link">devlog</a> pages!</p>
     </section>
 
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 SpiralDevs. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script type="text/javascript" src="JS/index.js"></script>
     <script type="text/javascript" src="JS/explosion.js"></script>
 </body>
+
 </html>

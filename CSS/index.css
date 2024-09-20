@@ -1,5 +1,111 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
+/* Global Styles */
+* {
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+body {
+  background: linear-gradient(135deg, #272727, #201f1f);
+  color: #edf0f1;
+}
+
+/* Typography */
+
+
+h1 {
+  font-size: 2.5rem; /* Increased size for impact */
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in, slideUp 1s ease-out;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+h4, h5 {
+  font-size: 18px; /* Slightly larger for better readability */
+  color: #edf0f1;
+  font-weight: 500;
+  text-decoration: none;
+  background-color: rgb(34, 34, 34);
+}
+
+p {
+  font-size: 1.25rem; /* Increased size for emphasis */
+  line-height: 1.6; /* Improved readability */
+  animation: fadeIn 1.2s ease-in, slideUp 1.2s ease-out;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#typing-text {
+  color: #FFFFFF;
+  font-weight: 500;
+  text-align: left;
+  background-color: rgb(34, 34, 34);
+  font-size: 15px;
+  padding: 10px;
+  height: 40px;
+  width: 100%;
+  outline: none;
+  resize: none;
+  box-sizing: border-box;
+}
+
+/* Layout */
+main {
+  flex: 1;
+}
+
+.home-body {
+  max-width: 700px;
+  margin: 20px auto;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(34, 34, 34, 0.8);
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-body p {
+  line-height: 1.6;
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default paddings */
+}
+
+.home-body a {
+  line-height: 1.6; /* Improved readability */
+  font-size: 1.25rem; /* Standardize font size */
+  margin: 0; /* Remove margins around links */
+  padding: 0; /* Remove paddings around links */
+  color: #7adeff;
+  text-decoration: underline;
+}
+
+.home-body a:hover {
+  color: #ADD8E6;
+}
+
+
+.home-body:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Modal */
 .modal {
   display: none;
   position: fixed;
@@ -9,26 +115,131 @@
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6); /* Darker overlay */
 }
 
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
+  margin: 10% auto; /* Adjusted for better centering */
+  padding: 30px;
   border: 1px solid #888;
-  width: 80%;
+  width: 70%; /* Adjusted for better layout */
+  border-radius: 10px; /* Added rounded corners */
 }
 
-postmedia {}
-
-body: {
-  position: fixed;
-  z-index: 1;
+/* Sidebar */
+.w3-sidebar {
+  width: 120px;
+  background: #222;
 }
 
-postmedia {
+/* Buttons and Links */
+a, button {
+  border: 0;
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+button {
+  background-color: #444;
+  border-radius: 5px;
+  padding: 10px 20px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+  background-color: #555;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+a:hover {
+  color: #ADD8E6;
+}
+
+.link {
+  color: #7adeff;
+  text-decoration: underline;
+}
+
+/* Lists */
+ul {
+  list-style-type: none;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  margin-top: auto;
+  border-top: 1px solid #444;
+}
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer p {
+  margin-bottom: 10px;
+  font-size: 0.875rem; /* Smaller font size for footer text */
+}
+
+footer .social-links a {
+  margin: 0 15px; /* Increased margin for better spacing */
+}
+
+footer .social-links img {
+  height: 32px; /* Slightly larger icons */
+  width: 32px;
+  transition: transform 0.3s, opacity 0.3s; /* Added opacity transition */
+}
+
+footer .social-links img:hover {
+  transform: scale(1.1);
+  opacity: 0.8; /* Slightly transparent on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .home-body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-body {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Custom Elements */
+.postmedia {
   position: sticky;
   top: 0px;
   padding: 10px 0px;
@@ -40,172 +251,88 @@ postmedia {
   justify-items: center;
 }
 
-heartpos {
+.heartpos {
   position: absolute;
   margin-top: 18%;
   margin-left: -95%;
 }
 
-postout {
-
-  margin-left: auto;
-  margin-right: auto;
+.postout,
+.postoutj,
+.postoutf,
+.postoutsmol,
+.postoutn {
   border-radius: 25px;
   background: grey;
+}
+
+.postout {
+  margin-left: auto;
+  margin-right: auto;
   padding: 20px;
   width: 85%;
 }
 
-postoutj {
+.postoutj {
   margin-left: auto;
   margin-right: auto;
-  border-radius: 25px;
-  background: grey;
   padding: 20px;
   width: 85%;
   height: 120px;
 }
 
-postoutf {
+.postoutf {
   margin-left: 3%;
-  border-radius: 25px;
-  background: grey;
   padding: 20px;
   width: 94%;
   height: 94%;
 }
 
-postoutsmol {
-  border-radius: 25px;
-  background: grey;
+.postoutsmol {
   width: 97%;
   height: 94%;
 }
 
-postoutn {
-  border-radius: 25px;
-  background: grey;
+.postoutn {
   padding: 20px;
   width: 100%;
   height: 15%;
 }
 
-p {
-  font-weight: 500;
-  font-family: 'Roboto Mono', monospace;
-  color: #edf0f1;
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-#typing-text {
-  color: #FFFFFF;
-  font-weight: 500;
-  text-align: left;
-  font-family: 'Roboto Mono', monospace;
-  overflow: auto;
-  background-color: rgb(34, 34, 34);
-  font-size: 15px;
-  padding: 5px;
-  height: 35px;
-  width: 100%;
-  outline: none;
-  resize: none;
-  box-sizing: border-box;
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.w3-sidebar {
-  width: 120px;
-  background: #222;
-}
-
-* {
-  font-weight: 500;
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto Mono', monospace;
-  /* box-sizing: border-box; */
-}
-
-body {
-  background-color: rgb(55, 55, 55);
-}
-
-/*nav begin*/
-
-li,
-a,
-button {
-  border: 0 !important;
-  font-weight: 500;
-  font-family: 'Roboto Mono', monospace;
-  font-size: 16px;
-  color: #edf0f1;
-  text-decoration: none;
-  background-color: transparent;
-  cursor: pointer;
-}
-
-h4 {
-  font-family: 'Roboto Mono', monospace;
-  font-weight: 500;
-  font-size: 16px;
-  color: #edf0f1;
-  text-decoration: none;
-  background-color: rgb(34, 34, 34);
-}
-
-h5 {
-  font-family: 'Roboto Mono', monospace;
-  font-weight: 500;
-  font-size: 16px;
-  color: #edf0f1;
-  text-decoration: none;
-}
-
-h1 {
-  color: #edf0f1;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 32px 10%;
-  background-color: rgb(34, 34, 34);
-}
-
-.logo {
-  height: 50px;
-  width: 50px;
-  cursor: pointer;
-  background-color: rgb(34, 34, 34);
-}
-
-a,
-button {
-  padding: 0px;
-}
-
-button:hover {
-  background-color: rgba(34, 34, 34, 0.8);
-}
-
-a:hover {
-  color: #ADD8E6;
-}
-
-.link {
-  color: #7adeff
-}
-
-
-.comment {
-  margin-left: 200%;
-}
-
-.commentbtn {
-  margin-left: 20px;
-}
-
-ul {
-  list-style-type: none;
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }

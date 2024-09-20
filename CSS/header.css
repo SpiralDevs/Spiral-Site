@@ -1,0 +1,227 @@
+/* header.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Top Bar */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    /* background-color: #222; */
+    position: relative;
+    z-index: 1000;
+}
+
+.home-icon {
+    display: flex;
+    align-items: center;
+}
+
+.home-icon img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.home-icon img:hover {
+    transform: scale(1.15); /* Slightly enlarge the icon */
+    filter: brightness(1.2); /* Increase brightness */
+}
+
+
+
+.github-link {
+    display: flex;
+    align-items: center;
+}
+
+.github-link a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #edf0f1;
+}
+
+.github-link img {
+    height: 32px;
+    width: 32px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.github-link img:hover {
+    transform: scale(1.15);
+    opacity: 0.8;
+}
+
+
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+}
+
+.nav_links {
+    display: flex;
+    list-style: none;
+    background-color: #333;
+    border-radius: 25px;
+    padding: 5px;
+    margin: 10;
+    gap: 10px;
+    /* Set the desired gap between items */
+}
+
+.nav_links li {
+    display: flex;
+    align-items: center;
+    position: relative;
+    /* Keep this for positioning child elements */
+}
+
+.nav_links li:not(:last-child)::after {
+    content: '';
+    height: 60%;
+    width: 1px;
+    background-color: #555;
+    margin-left: 10px;
+    /* Space from the previous item */
+    align-self: center;
+    /* Center the line vertically */
+}
+
+.nav-item {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.075);
+}
+
+
+/* Active Dot Indicator */
+.active-dot {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: transparent;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#portfolio-dot.active,
+#devlogs-dot.active {
+    background-color: green;
+}
+
+/* Responsive styles */
+/* Top Bar Adjustments */
+@media (max-width: 768px) {
+    .top-bar {
+        padding: 10px 15px; /* Reduced padding */
+    }
+
+    .github-link img {
+        height: 24px; /* Smaller icon size for better fit */
+        width: 24px;
+    }
+
+    .home-icon img {
+        width: 20px; /* Smaller home icon */
+        height: 20px;
+    }
+}
+
+/* Navigation Links */
+@media (max-width: 768px) {
+    .nav_links {
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+    }
+
+    .nav_links li {
+        margin: 5px 0; /* Reduced margin between items */
+    }
+
+    .nav-item {
+        width: 100%;
+        text-align: center;
+        padding: 10px; /* Adjusted padding */
+    }
+
+    .nav_links li::after {
+        display: none; /* Remove separators on small screens */
+    }
+}
+
+/* Home Body */
+@media (max-width: 768px) {
+    .home-body {
+        max-width: 100%; /* Full width on smaller screens */
+        margin: 10px; /* Adjusted margin */
+        padding: 20px; /* Adjusted padding */
+    }
+
+    h1 {
+        font-size: 2rem; /* Smaller font size */
+    }
+
+    p {
+        font-size: 1rem; /* Smaller font size */
+    }
+}
+
+/* Modals */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%; /* Adjust width for smaller screens */
+        margin: 5% auto; /* Adjusted centering */
+    }
+}
+
+/* Buttons and Links */
+a, button {
+    padding: 10px 15px; /* Increased padding for touch targets */
+    font-size: 14px; /* Slightly smaller font size for better fit */
+}
+
+/* Responsive Adjustments for Extra Small Screens */
+@media (max-width: 480px) {
+    .home-body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .github-link img, .home-icon img {
+        height: 20px;
+        width: 20px;
+    }
+
+    .modal-content {
+        width: 95%; /* Even smaller width for very small screens */
+    }
+}
