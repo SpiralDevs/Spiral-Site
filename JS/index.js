@@ -11,11 +11,11 @@ function setActiveDot() {
     devlogsDot.classList.remove('active');
 
     // Set active class based on the current page
-    if (currentPage.includes('spiraldevs.xyz') && !currentPage.includes('portfolio') && !currentPage.includes('devlogs')) {
+    if (currentPage.includes('https://spiraldevs.xyz/') && !currentPage.includes('portfolio') && !currentPage.includes('devlogs')) {
         homeDot.classList.add('active');
-    } else if (currentPage.includes('portfolio')) {
+    } else if (currentPage.includes('https://portfolio.spiraldevs.xyz/')) {
         portfolioDot.classList.add('active');
-    } else if (currentPage.includes('devlogs')) {
+    } else if (currentPage.includes('https://devlogs.spiraldevs.xyz/')) {
         devlogsDot.classList.add('active');
     }
 }
