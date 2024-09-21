@@ -1,8 +1,24 @@
-// Add active class to the correct dot for the current page
-const currentPage = window.location.pathname;
+// Function to set the active dot
+function setActiveDot() {
+    const currentPage = window.location.hostname;
+    const homeDot = document.getElementById('home-dot');
+    const portfolioDot = document.getElementById('portfolio-dot');
+    const devlogsDot = document.getElementById('devlogs-dot');
 
-if (currentPage.includes("portfolio")) {
-    document.getElementById('portfolio-dot').classList.add('active');
-} else if (currentPage.includes("devlogs")) {
-    document.getElementById('devlogs-dot').classList.add('active');
+    // Remove active class from all dots
+    homeDot.classList.remove('active');
+    portfolioDot.classList.remove('active');
+    devlogsDot.classList.remove('active');
+
+    // Set active class based on the current page
+    if (currentPage.includes('spiraldevs.xyz') && !currentPage.includes('portfolio') && !currentPage.includes('devlogs')) {
+        homeDot.classList.add('active');
+    } else if (currentPage.includes('portfolio')) {
+        portfolioDot.classList.add('active');
+    } else if (currentPage.includes('devlogs')) {
+        devlogsDot.classList.add('active');
+    }
 }
+
+// Call the function when the page loads
+document.addEventListener('DOMContentLoaded', setActiveDot);

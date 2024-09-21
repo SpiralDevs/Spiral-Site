@@ -124,14 +124,23 @@ header {
     height: 6px;
     border-radius: 50%;
     background-color: transparent;
-    bottom: -6px;
+    bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
+    transition: background-color 0.3s ease;
 }
 
-#portfolio-dot.active,
-#devlogs-dot.active {
-    background-color: green;
+.active-dot.active {
+    background-color: #4CAF50; /* Green color */
+}
+
+/* Adjust the position of the home dot */
+.home-icon {
+    position: relative;
+}
+
+.home-icon .active-dot {
+    bottom: -5px;
 }
 
 /* Responsive styles */
